@@ -1,12 +1,19 @@
 body {
     text-align: center;
-    background-color: bisque;
+    background-color: cornflowerblue;
 }
 div{
     text-align: left;
     width: 50%;
+    background-color: bisque;
+    border:20px solid white;
+    margin: auto;
+    border-style: double;
+    margin-top: 17.5px;
+    /* background-image: url('bg.jpg'); */
 }
 p {
     width: 100%;
     line-height: 1;
+    font-size: large;
 }
