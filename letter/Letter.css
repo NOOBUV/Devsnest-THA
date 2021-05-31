@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    background-color: bisque;
+}
+div{
+    text-align: left;
+    width: 50%;
+}
+p {
+    width: 100%;
+    line-height: 1;
+}
