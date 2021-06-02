@@ -1,0 +1,13 @@
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+legend {
+    text-align: center;
+    border-color: crimson;
+    display:flex;
+    flex-direction:column;
+}
+.ceo {
+    font-weight: normal;
+}
