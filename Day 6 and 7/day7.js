@@ -49,3 +49,4 @@ var library = [ { title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1254
 library.sort(function (obj1, obj2) {
     return obj1["libraryID"] - obj2["libraryID"];
 });
+console.log(library)
