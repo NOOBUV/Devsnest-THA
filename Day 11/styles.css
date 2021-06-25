@@ -6,7 +6,7 @@ body{
 	color: #333;
   font-weight: 300;
   text-align: center;
-  background-color: #929AAB;
+  background-color: #293B5F;
 
 }
 h1{
@@ -14,17 +14,22 @@ h1{
   margin: 0px;
   padding: 10px;
   font-size: 20px;
-  background-color: #444;
+  background-color: #47597E;
   color: #fff;
+  border-radius:20px;
 }
 .question{
+  font-weight: 500;
   font-size: 30px;
+  margin-top:10px;
   margin-bottom: 10px;
 }
 .answers {
+  font-weight:400;
   margin-bottom: 20px;
   text-align: left;
   display: inline-block;
+  font-size:22px;
 }
 .answers label{
   display: block;
@@ -33,13 +38,14 @@ h1{
 button{
   font-family: 'Work Sans', sans-serif;
 	font-size: 22px;
-	background-color: #279;
+	background-color: #47597E;
 	color: #fff;
 	border: 0px;
 	border-radius: 3px;
 	padding: 20px;
 	cursor: pointer;
 	margin-bottom: 20px;
+  border-radius: 20px;
 }
 button:hover{
 	background-color: #38a;
@@ -66,15 +72,18 @@ button:hover{
     padding: 40px;
     position: relative;
     width: 50%;
-    height: 200px;
+    height: 40vh;
     margin:auto;
     margin-top: 100px;
-    background-color:#F7F7F7;
+    background-color:#DBE6FD;
+    color:#7E7963;
     border-radius: 10px;
     box-sizing: border-box;
+    line-height:10;
 }
 #quiz{
     background-color: #f7f7f7;
+    line-height: 1.5;
 }
 .green{
     color:green;
@@ -82,7 +91,16 @@ button:hover{
 .red{
 color:red
 }
-
+/* .options {
+  width: 20px;
+  height: 20px;
+}
+.options:checked{
+  position:relative;
+  top:6px;
+  color: #FF96AD;
+  background-color: #FF96AD;
+} */
 
 /*  these are animations and class for fancy buttons will see it today!*/
 /* .button {

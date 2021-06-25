@@ -30,6 +30,16 @@ const myQuestions = [
       d: "ESLint"
     },
     correctAnswer: "d"
+  },
+  {
+    question: "Which method to select to choose id?",
+    answers: {
+      a: "document.getElementbyId",
+      b: "document.getElementsbyClass",
+      c: "document.querySelector",
+      d: "document.querySelectorAll"
+    },
+    correctAnswer: "a"
   }
 ];
 // starting the logic from here!!
@@ -52,7 +62,7 @@ const myQuestions = [
             // ...add an HTML radio button
             answers.push(
               `<label>
-                <input type="radio" name="question${questionNumber}" value="${letter}">
+                <input class="options" type="radio" name="question${questionNumber}" value="${letter}">
                 ${letter} :
                 ${currentQuestion.answers[letter]}
               </label>`
