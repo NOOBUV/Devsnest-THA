@@ -10,8 +10,11 @@ body{
 
 }
 h1{
+  /* margin-top: 50px; */
   font-weight: 300;
-  margin: 0px;
+  width: 40%;
+  margin: auto;
+  margin-top:50px;
   padding: 10px;
   font-size: 20px;
   background-color: #47597E;
@@ -34,21 +37,6 @@ h1{
 .answers label{
   display: block;
   margin-bottom: 10px;
-}
-button{
-  font-family: 'Work Sans', sans-serif;
-	font-size: 22px;
-	background-color: #47597E;
-	color: #fff;
-	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
-	cursor: pointer;
-	margin-bottom: 20px;
-  border-radius: 20px;
-}
-button:hover{
-	background-color: #38a;
 }
 
 
@@ -90,4 +78,135 @@ button:hover{
 }
 .red{
 color:red
+}
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #7E7963;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+/* animations for buttons */
+.buttonfx{
+
+  margin-top:20px;
+  color: white; /* button text color */
+  outline: none;
+  background: transparent;
+  border: none;
+  padding:8px; 
+  font-family: 'Work Sans', sans-serif;
+	font-size: 22px; /* use google font */
+  line-height: 2;
+  position: relative;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+	text-decoration: none; /* remove underline if using A instead of BUTTON tag */
+  overflow: hidden;
+  transition: all .5s;
+  border-radius: 20px;
+  border-radius: 50px;
+
+}
+
+/* //// Default effect: Slide from Top  //// */
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #38a; /* onhover background color */
+  z-index: -1;
+  transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+  transition: all .5s;
+}
+
+.buttonfx:before{
+  background: #47597E; /* button default background color */
+  z-index: -2;
+  transform: translate3D(0,0,0);
+}
+
+.buttonfx:hover{
+	color: white;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+
+/* submit button */
+.curtaindown{
+  border: 1px solid #eee;
+  /* border-bottom: 4px solid #eee; */
+}
+
+.curtaindown:before,
+.curtaindown:after{
+  background: #38a;
+  transform: translate3D(0,-100%,0);
+}
+
+.curtaindown:after{
+  transform: translate3D(0,100%,0);
+}
+
+.curtaindown:hover:before,
+.curtaindown:hover:after{
+  transform: translate3D(0,-50%,0);
+  transition: all .5s;
+}
+
+.curtaindown:hover:after{
+  transform: translate3D(0,50%,0);
+}
+/* slide left */
+.slideleft:after{
+  top: 0;
+  z-index: -1;
+  transform: translate3D(-101%,0,0);
+}
+
+.slideleft:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+}
+/* previous button */
+.angleinleft:after{
+  width: 200%;
+  transform-origin: 0 bottom;
+  transform: translate3D(-50%,0,0) rotate(-50deg);
+}
+
+.angleinleft:hover:after{
+  transform: rotate(0deg);
+  transition: all .5s;
 }
