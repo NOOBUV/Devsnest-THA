@@ -2,6 +2,7 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+// questions stored as object in a list!
 const myQuestions = [
   {
     question: "Who invented JavaScript?",
