@@ -11,14 +11,67 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body onload="initClock()">
     <div class="container">
-      <div class="timecontainer"></div>
+      <div class="timecontainer">
+        <div class="date">
+          <span id="dayname">Day</span>,
+          <span id="month">Month</span>
+          <span id="daynum">00</span>,
+          <span id="year">Year</span>
+        </div>
+        <div class="time">
+          <span id="hour">00</span>: <span id="minutes">00</span>:
+          <span id="seconds">00</span>
+          <span id="period">AM</span>
+        </div>
+      </div>
       <div class="todoaddcontainer">
         <input class="todo" type="text" />
         <button class="addbtn">+</button>
       </div>
       <div class="tdcont"></div>
+    </div>
+    <div class="cardqoute" id="card1">
+      <div class="thecard">
+        <div class="front">
+          <span class="text">Front of the card</span>
+          <span class="author">author</span>
+          <button class="new-quote">Next qoute</button>
+        </div>
+        <div class="back">
+          <span class="text">back of the card</span>
+        <spand class="author">author</spand>
+        <button class="new-quote" onclick="newQoute()">Next qoute</button>
+      </div>
+      </div>
+      </div>
+    </div>
+    <div class="cardqoute" id="card2">
+      <div class="thecard">
+        <div class="front">
+          <span>Front of the card</span>
+        </div>
+        <div class="back"><span>back of the card</span></div>
+      </div>
+      </div>
+    </div>
+    <div class="cardqoute" id="card3">
+      <div class="thecard">
+        <div class="front">
+          <span>Front of the card</span>
+        </div>
+        <div class="back"><span>back of the card</span></div>
+      </div>
+      </div>
+    </div>
+    <div class="cardqoute" id="card4">
+      <div class="thecard">
+        <div class="front">
+          <span>Front of the card</span>
+        </div>
+        <div class="back"><span>back of the card</span></div>
+      </div>
     </div>
   </body>
   <script src="script.js"></script>
