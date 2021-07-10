@@ -218,7 +218,7 @@ const textBack2 = texts[3];
 const authorFront3 = authors[4];
 const authorBack3 = authors[5];
 
-const textFront3 = texts[4]
+const textFront3 = texts[4];
 const textBack3 = texts[5];
 
 const authorFront4 = authors[6];
@@ -227,15 +227,13 @@ const authorBack4 = authors[7];
 const textFront4 = texts[6];
 const textBack4 = texts[7];
 
-
 const displayQuote = () => {
-    
   let index = Math.floor(Math.random() * data.length);
   let quote = data[index].text;
   let author = data[index].author;
-  
-  if (quote.length>90){
-      displayQoute()
+
+  if (quote.length > 90) {
+    displayQoute();
   }
 
   if (!author) {
@@ -244,90 +242,13 @@ const displayQuote = () => {
   if (front) {
     textFront1.innerHTML = quote;
     authorFront1.innerHTML = "-" + author;
-    
   } else {
     textBack1.innerHTML = quote;
     authorBack1.innerHTML = "-" + author;
-    
   }
 
   front = !front;
-
 };
-
-const displayQuote2 = () => {
-    
-  let index = Math.floor(Math.random() * data.length);
-  let quote = data[index].text;
-  let author = data[index].author;
-  if (quote.length>90){
-      displayQoute2()
-  }
-
-  if (!author) {
-    author = "Anonymous";
-  }
-  if (front) {
-    textFront2.innerHTML = quote;
-    authorFront2.innerHTML = "-" + author;
-    
-  } else {
-    textBack2.innerHTML = quote;
-    authorBack2.innerHTML = "-" + author;
-  }
-
-  front = !front;
-
-};
-const displayQuote3 = () => {
-    
-  let index = Math.floor(Math.random() * data.length);
-  let quote = data[index].text;
-  let author = data[index].author;
-  if (quote.length>90){
-      displayQoute3()
-  }
-
-  if (!author) {
-    author = "Anonymous";
-  }
-  if (front) {
-    textFront3.innerHTML = quote;
-    authorFront3.innerHTML = "-" + author;
-    
-  } else {
-    textBack3.innerHTML = quote;
-    authorBack3.innerHTML = "-" + author;
-  }
-
-  front = !front;
-
-};
-const displayQuote4 = () => {
-    
-  let index = Math.floor(Math.random() * data.length);
-  let quote = data[index].text;
-  let author = data[index].author;
-  if (quote.length>90){
-      displayQoute4()
-  }
-
-  if (!author) {
-    author = "Anonymous";
-  }
-  if (front) {
-    textFront4.innerHTML = quote;
-    authorFront4.innerHTML = "-" + author;
-    
-  } else {
-    textBack4.innerHTML = quote;
-    authorBack4.innerHTML = "-" + author;
-  }
-
-  front = !front;
-
-};
-
 
 fetch("https://type.fit/api/quotes")
   .then(function (response) {
@@ -335,26 +256,20 @@ fetch("https://type.fit/api/quotes")
   }) // Getting the raw JSON data
   .then(function (data) {
     this.data = data;
-    console.log(data)
+    console.log(data);
     displayQuote();
-    displayQuote2();
-    displayQoute3();
-    displayQoute4();
-    
   });
 
-button.forEach((fbutton,index) => {
+button.forEach((fbutton, index) => {
   fbutton.addEventListener("click", (e) => {
     e.target.parentElement.parentElement.classList.toggle("rotate");
-    if (index<2){
-    displayQuote();}
-    else if (2<=index<4){
+    if (index < 2) {
+      displayQuote();
+    } else if (2 <= index < 4) {
       displayQoute2();
-    }
-    else if (4<=index<6){
+    } else if (4 <= index < 6) {
       displayQoute3();
-    }
-    else{
+    } else {
       displayQoute4();
     }
   });
