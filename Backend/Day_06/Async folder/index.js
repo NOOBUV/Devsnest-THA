@@ -4,7 +4,7 @@ fs.mkdir("folder_async", (err) => {
     console.log("created folder");
 });
 
-fs.writeFile("./folder_async/async_file.js", "imma type some shit here", (err) => {
+fs.writeFile("./folder_async/async_file.js", "lorem ipsum dispsum threesum foursome fivesome .....", (err) => {
     console.log("file created");
 })
 
