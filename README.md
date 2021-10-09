@@ -1,2 +1,2 @@
 # Devsnest-THA
-All the devsnest's tha are stored. Frontend one's are here backend is starting soon!
+All the devsnest's tha are stored. Frontend and Backend THA's are stored here!
